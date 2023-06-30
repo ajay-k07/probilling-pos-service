@@ -1,0 +1,30 @@
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost/postgres
+  sql:
+    init:
+      platform: postgres
+      continue-on-error: true
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+server:
+  port: 8082
+  servlet:
+    context-path: /v1/probilling
+    
+
+
+
+
